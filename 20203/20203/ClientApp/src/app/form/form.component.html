@@ -1,0 +1,13 @@
+<div>
+  <!--<input type="email" name="primaryEmail" [(ngModel)]="myEmail" email #prmEmail="ngModel" placeholder="Enter Email" />-->
+
+  <input  id="email" [(ngModel)]="myEmail" placeholder="Enter Email" email="true" />
+  <div style="height:50px;">
+    <div *ngIf="myEmail!=='' && !isValidEmail">
+      Primary email address is not valid.
+  </div>
+</div>
+    <button (click)="send()" [disabled]="!isValidEmail" style="margin:10px">Send</button>
+    <br />
+    <label>{{recievedTime}}</label>
+</div>
